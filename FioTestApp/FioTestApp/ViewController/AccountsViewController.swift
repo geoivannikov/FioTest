@@ -24,7 +24,7 @@ final class AccountsViewController: UITableViewController {
         setUpBinds()
         viewModel.viewDidLoad()
         
-        viewModel.selectedAccount.send(accounts.first!)
+//        viewModel.selectedAccount.send(Account(name: "Some name", number: 1111, currency: "CZK", balance: 10.0))
     }
     
     private func setUpLayout() {
@@ -34,7 +34,7 @@ final class AccountsViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "History",
                                                                  style: .done,
                                                                  target: self,
-                                                                 action: #selector(self.action(sender:)))
+                                                                 action: #selector(self.historyPressed(sender:)))
     }
     
     private func setUpBinds() {
@@ -52,8 +52,8 @@ final class AccountsViewController: UITableViewController {
             .store(in: &subscriptions)
     }
     
-    @objc func action(sender: UIBarButtonItem) {
-        
+    @objc private func historyPressed(sender: UIBarButtonItem) {
+        viewModel.historyPressed.send(())
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

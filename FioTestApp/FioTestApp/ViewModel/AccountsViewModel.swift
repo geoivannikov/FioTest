@@ -12,6 +12,7 @@ protocol AccountsViewModelProtocol {
     var accounts: AnyPublisher<[Account], Never> { get }
     var isHistoryEmpty: AnyPublisher<Bool, Never> { get }
     var selectedAccount: PassthroughSubject<Account, Never> { get }
+    var historyPressed: PassthroughSubject<Void, Never> { get }
     
     func viewDidLoad()
 }
@@ -24,6 +25,7 @@ final class AccountsViewModel: AccountsViewModelProtocol {
         isHistoryEmptySubject.eraseToAnyPublisher()
     }
     let selectedAccount = PassthroughSubject<Account, Never>()
+    let historyPressed = PassthroughSubject<Void, Never>()
     
     private let accountsSubject = PassthroughSubject<[Account], Never>()
     private let isHistoryEmptySubject = PassthroughSubject<Bool, Never>()

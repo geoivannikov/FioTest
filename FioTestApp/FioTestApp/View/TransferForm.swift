@@ -22,7 +22,7 @@ final class TransferForm: UIView {
         textField.backgroundColor = .white
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.borderStyle = .roundedRect
-        textField.placeholder = "Amount"
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -32,6 +32,7 @@ final class TransferForm: UIView {
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.borderStyle = .roundedRect
         textField.placeholder = "Execution date"
+        textField.text = "ASAP"
         return textField
     }()
     
@@ -40,14 +41,16 @@ final class TransferForm: UIView {
         textField.backgroundColor = .white
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.borderStyle = .roundedRect
-        textField.placeholder = "Variable symbol"
+        textField.placeholder = "Variable symbol (Optional)"
+        textField.keyboardType = .numberPad
         return textField
     }()
 
     let sendButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 5.0
-        button.backgroundColor = .blue
+        button.isEnabled = true
+        button.backgroundColor = .fioBlue
         button.clipsToBounds = true
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitle("Send", for: .normal)

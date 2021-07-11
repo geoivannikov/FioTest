@@ -6,15 +6,26 @@
 //
 
 import Foundation
+import Combine
 
 protocol TransferFormViewModelProtocol {
     var account: Account { get }
+    var sendTransfer: PassthroughSubject<TransferData, Never> { get }
 }
 
 final class TransferFormViewModel: TransferFormViewModelProtocol {
     let account: Account
+    let sendTransfer = PassthroughSubject<TransferData, Never>()
     
-    init(account: Account) {
+    private var subscriptions = Set<AnyCancellable>()
+    
+    init(account: Account, fileService: FileServiceProtocol? = Env.current.fileService) {
         self.account = account
+        
+        sendTransfer
+            .sink(receiveValue: { transferData in
+                fileService?.saveData(to: "transfers", "txt", content: "bla")
+            })
+            .store(in: &subscriptions)
     }
 }
