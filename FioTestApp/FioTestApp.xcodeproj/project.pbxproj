@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C6A37FF269A1364001DCEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A37FE269A1364001DCEBB /* AppDelegate.swift */; };
+		9C6A3806269A1364001DCEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A3804269A1364001DCEBB /* Main.storyboard */; };
+		9C6A3808269A1368001DCEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A3807269A1368001DCEBB /* Assets.xcassets */; };
+		9C6A380B269A1368001DCEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A3809269A1368001DCEBB /* LaunchScreen.storyboard */; };
+		9C6A3816269A1368001DCEBB /* FioTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A3815269A1368001DCEBB /* FioTestAppTests.swift */; };
+		9C6A3821269A1368001DCEBB /* FioTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A3820269A1368001DCEBB /* FioTestAppUITests.swift */; };
+		9C6A3830269A163F001DCEBB /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A382F269A163F001DCEBB /* CoordinatorProtocol.swift */; };
+		9C6A3832269A165D001DCEBB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A3831269A165D001DCEBB /* MainCoordinator.swift */; };
+		9C873DA9269A364900ACF6A7 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DA8269A364900ACF6A7 /* ApiManager.swift */; };
+		9C873DAC269A3A9600ACF6A7 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DAB269A3A9600ACF6A7 /* AccountsViewController.swift */; };
+		9C873DAF269A3AF100ACF6A7 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DAE269A3AF100ACF6A7 /* AccountsViewModel.swift */; };
+		9C873DB2269A3B4000ACF6A7 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DB1269A3B4000ACF6A7 /* Env.swift */; };
+		9C873DB5269A3B5100ACF6A7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DB4269A3B5100ACF6A7 /* Environment.swift */; };
+		9C873DB8269A3C7300ACF6A7 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DB7269A3C7300ACF6A7 /* ReachabilityService.swift */; };
+		9C873DBC269A40DA00ACF6A7 /* AccountsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DBB269A40DA00ACF6A7 /* AccountsData.swift */; };
+		9C873DC0269A658B00ACF6A7 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DBF269A658B00ACF6A7 /* FileManager.swift */; };
+		9C873DC2269A6DFE00ACF6A7 /* TransferFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DC1269A6DFE00ACF6A7 /* TransferFormViewController.swift */; };
+		9C873DC4269A6E3000ACF6A7 /* TransferFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DC3269A6E3000ACF6A7 /* TransferFormViewModel.swift */; };
+		9C873DC6269A6E9200ACF6A7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DC5269A6E9200ACF6A7 /* Account.swift */; };
+		9C873DC8269A70C100ACF6A7 /* TransferForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DC7269A70C100ACF6A7 /* TransferForm.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C6A3812269A1368001DCEBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6A37F3269A1364001DCEBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6A37FA269A1364001DCEBB;
+			remoteInfo = FioTestApp;
+		};
+		9C6A381D269A1368001DCEBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6A37F3269A1364001DCEBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6A37FA269A1364001DCEBB;
+			remoteInfo = FioTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C6A37FB269A1364001DCEBB /* FioTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FioTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6A37FE269A1364001DCEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C6A3805269A1364001DCEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C6A3807269A1368001DCEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C6A380A269A1368001DCEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C6A380C269A1368001DCEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6A3811269A1368001DCEBB /* FioTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FioTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6A3815269A1368001DCEBB /* FioTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FioTestAppTests.swift; sourceTree = "<group>"; };
+		9C6A3817269A1368001DCEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6A381C269A1368001DCEBB /* FioTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FioTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6A3820269A1368001DCEBB /* FioTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FioTestAppUITests.swift; sourceTree = "<group>"; };
+		9C6A3822269A1368001DCEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6A382F269A163F001DCEBB /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9C6A3831269A165D001DCEBB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9C873DA8269A364900ACF6A7 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		9C873DAB269A3A9600ACF6A7 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		9C873DAE269A3AF100ACF6A7 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		9C873DB1269A3B4000ACF6A7 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		9C873DB4269A3B5100ACF6A7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		9C873DB7269A3C7300ACF6A7 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		9C873DBB269A40DA00ACF6A7 /* AccountsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsData.swift; sourceTree = "<group>"; };
+		9C873DBF269A658B00ACF6A7 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		9C873DC1269A6DFE00ACF6A7 /* TransferFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFormViewController.swift; sourceTree = "<group>"; };
+		9C873DC3269A6E3000ACF6A7 /* TransferFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFormViewModel.swift; sourceTree = "<group>"; };
+		9C873DC5269A6E9200ACF6A7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		9C873DC7269A70C100ACF6A7 /* TransferForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferForm.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C6A37F8269A1364001DCEBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6A380E269A1368001DCEBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6A3819269A1368001DCEBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C6A37F2269A1364001DCEBB = {
+			isa = PBXGroup;
+			children = (
+				9C6A37FD269A1364001DCEBB /* FioTestApp */,
+				9C6A3814269A1368001DCEBB /* FioTestAppTests */,
+				9C6A381F269A1368001DCEBB /* FioTestAppUITests */,
+				9C6A37FC269A1364001DCEBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C6A37FC269A1364001DCEBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A37FB269A1364001DCEBB /* FioTestApp.app */,
+				9C6A3811269A1368001DCEBB /* FioTestAppTests.xctest */,
+				9C6A381C269A1368001DCEBB /* FioTestAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C6A37FD269A1364001DCEBB /* FioTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A382E269A1603001DCEBB /* Coordinator */,
+				9C873DB9269A3FB200ACF6A7 /* Model */,
+				9C873DAD269A3ADB00ACF6A7 /* ViewModel */,
+				9C873DAA269A3A7400ACF6A7 /* ViewController */,
+				9C873DBA269A3FB800ACF6A7 /* View */,
+				9C873DA7269A363800ACF6A7 /* Services */,
+				9C873DA6269A2B7B00ACF6A7 /* SupportingFiles */,
+				9C873DB6269A3B9500ACF6A7 /* Utils */,
+				9C6A3809269A1368001DCEBB /* LaunchScreen.storyboard */,
+				9C6A3804269A1364001DCEBB /* Main.storyboard */,
+				9C6A380C269A1368001DCEBB /* Info.plist */,
+			);
+			path = FioTestApp;
+			sourceTree = "<group>";
+		};
+		9C6A3814269A1368001DCEBB /* FioTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A3815269A1368001DCEBB /* FioTestAppTests.swift */,
+				9C6A3817269A1368001DCEBB /* Info.plist */,
+			);
+			path = FioTestAppTests;
+			sourceTree = "<group>";
+		};
+		9C6A381F269A1368001DCEBB /* FioTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A3820269A1368001DCEBB /* FioTestAppUITests.swift */,
+				9C6A3822269A1368001DCEBB /* Info.plist */,
+			);
+			path = FioTestAppUITests;
+			sourceTree = "<group>";
+		};
+		9C6A382E269A1603001DCEBB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A382F269A163F001DCEBB /* CoordinatorProtocol.swift */,
+				9C6A3831269A165D001DCEBB /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9C873DA6269A2B7B00ACF6A7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A37FE269A1364001DCEBB /* AppDelegate.swift */,
+				9C6A3807269A1368001DCEBB /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9C873DA7269A363800ACF6A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DA8269A364900ACF6A7 /* ApiManager.swift */,
+				9C873DBF269A658B00ACF6A7 /* FileManager.swift */,
+				9C873DB7269A3C7300ACF6A7 /* ReachabilityService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9C873DAA269A3A7400ACF6A7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DAB269A3A9600ACF6A7 /* AccountsViewController.swift */,
+				9C873DC1269A6DFE00ACF6A7 /* TransferFormViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C873DAD269A3ADB00ACF6A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DAE269A3AF100ACF6A7 /* AccountsViewModel.swift */,
+				9C873DC3269A6E3000ACF6A7 /* TransferFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C873DB0269A3B2B00ACF6A7 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DB1269A3B4000ACF6A7 /* Env.swift */,
+				9C873DB4269A3B5100ACF6A7 /* Environment.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		9C873DB6269A3B9500ACF6A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DB0269A3B2B00ACF6A7 /* DI */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9C873DB9269A3FB200ACF6A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DBB269A40DA00ACF6A7 /* AccountsData.swift */,
+				9C873DC5269A6E9200ACF6A7 /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C873DBA269A3FB800ACF6A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C873DC7269A70C100ACF6A7 /* TransferForm.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C6A37FA269A1364001DCEBB /* FioTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6A3825269A1368001DCEBB /* Build configuration list for PBXNativeTarget "FioTestApp" */;
+			buildPhases = (
+				9C6A37F7269A1364001DCEBB /* Sources */,
+				9C6A37F8269A1364001DCEBB /* Frameworks */,
+				9C6A37F9269A1364001DCEBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FioTestApp;
+			productName = FioTestApp;
+			productReference = 9C6A37FB269A1364001DCEBB /* FioTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C6A3810269A1368001DCEBB /* FioTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6A3828269A1368001DCEBB /* Build configuration list for PBXNativeTarget "FioTestAppTests" */;
+			buildPhases = (
+				9C6A380D269A1368001DCEBB /* Sources */,
+				9C6A380E269A1368001DCEBB /* Frameworks */,
+				9C6A380F269A1368001DCEBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C6A3813269A1368001DCEBB /* PBXTargetDependency */,
+			);
+			name = FioTestAppTests;
+			productName = FioTestAppTests;
+			productReference = 9C6A3811269A1368001DCEBB /* FioTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C6A381B269A1368001DCEBB /* FioTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6A382B269A1368001DCEBB /* Build configuration list for PBXNativeTarget "FioTestAppUITests" */;
+			buildPhases = (
+				9C6A3818269A1368001DCEBB /* Sources */,
+				9C6A3819269A1368001DCEBB /* Frameworks */,
+				9C6A381A269A1368001DCEBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C6A381E269A1368001DCEBB /* PBXTargetDependency */,
+			);
+			name = FioTestAppUITests;
+			productName = FioTestAppUITests;
+			productReference = 9C6A381C269A1368001DCEBB /* FioTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C6A37F3269A1364001DCEBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9C6A37FA269A1364001DCEBB = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					9C6A3810269A1368001DCEBB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 9C6A37FA269A1364001DCEBB;
+					};
+					9C6A381B269A1368001DCEBB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 9C6A37FA269A1364001DCEBB;
+					};
+				};
+			};
+			buildConfigurationList = 9C6A37F6269A1364001DCEBB /* Build configuration list for PBXProject "FioTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C6A37F2269A1364001DCEBB;
+			productRefGroup = 9C6A37FC269A1364001DCEBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C6A37FA269A1364001DCEBB /* FioTestApp */,
+				9C6A3810269A1368001DCEBB /* FioTestAppTests */,
+				9C6A381B269A1368001DCEBB /* FioTestAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C6A37F9269A1364001DCEBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6A380B269A1368001DCEBB /* LaunchScreen.storyboard in Resources */,
+				9C6A3808269A1368001DCEBB /* Assets.xcassets in Resources */,
+				9C6A3806269A1364001DCEBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6A380F269A1368001DCEBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6A381A269A1368001DCEBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C6A37F7269A1364001DCEBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6A3832269A165D001DCEBB /* MainCoordinator.swift in Sources */,
+				9C873DB5269A3B5100ACF6A7 /* Environment.swift in Sources */,
+				9C873DC2269A6DFE00ACF6A7 /* TransferFormViewController.swift in Sources */,
+				9C873DC8269A70C100ACF6A7 /* TransferForm.swift in Sources */,
+				9C873DA9269A364900ACF6A7 /* ApiManager.swift in Sources */,
+				9C6A37FF269A1364001DCEBB /* AppDelegate.swift in Sources */,
+				9C873DAC269A3A9600ACF6A7 /* AccountsViewController.swift in Sources */,
+				9C873DB8269A3C7300ACF6A7 /* ReachabilityService.swift in Sources */,
+				9C873DAF269A3AF100ACF6A7 /* AccountsViewModel.swift in Sources */,
+				9C873DC0269A658B00ACF6A7 /* FileManager.swift in Sources */,
+				9C873DBC269A40DA00ACF6A7 /* AccountsData.swift in Sources */,
+				9C6A3830269A163F001DCEBB /* CoordinatorProtocol.swift in Sources */,
+				9C873DB2269A3B4000ACF6A7 /* Env.swift in Sources */,
+				9C873DC4269A6E3000ACF6A7 /* TransferFormViewModel.swift in Sources */,
+				9C873DC6269A6E9200ACF6A7 /* Account.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6A380D269A1368001DCEBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6A3816269A1368001DCEBB /* FioTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6A3818269A1368001DCEBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6A3821269A1368001DCEBB /* FioTestAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C6A3813269A1368001DCEBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6A37FA269A1364001DCEBB /* FioTestApp */;
+			targetProxy = 9C6A3812269A1368001DCEBB /* PBXContainerItemProxy */;
+		};
+		9C6A381E269A1368001DCEBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6A37FA269A1364001DCEBB /* FioTestApp */;
+			targetProxy = 9C6A381D269A1368001DCEBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C6A3804269A1364001DCEBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6A3805269A1364001DCEBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C6A3809269A1368001DCEBB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6A380A269A1368001DCEBB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C6A3823269A1368001DCEBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C6A3824269A1368001DCEBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C6A3826269A1368001DCEBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97DXWGRCGZ;
+				INFOPLIST_FILE = FioTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivannikov.FioTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C6A3827269A1368001DCEBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97DXWGRCGZ;
+				INFOPLIST_FILE = FioTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivannikov.FioTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C6A3829269A1368001DCEBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97DXWGRCGZ;
+				INFOPLIST_FILE = FioTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivannikov.FioTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FioTestApp.app/FioTestApp";
+			};
+			name = Debug;
+		};
+		9C6A382A269A1368001DCEBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97DXWGRCGZ;
+				INFOPLIST_FILE = FioTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivannikov.FioTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FioTestApp.app/FioTestApp";
+			};
+			name = Release;
+		};
+		9C6A382C269A1368001DCEBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97DXWGRCGZ;
+				INFOPLIST_FILE = FioTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivannikov.FioTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FioTestApp;
+			};
+			name = Debug;
+		};
+		9C6A382D269A1368001DCEBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97DXWGRCGZ;
+				INFOPLIST_FILE = FioTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivannikov.FioTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FioTestApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C6A37F6269A1364001DCEBB /* Build configuration list for PBXProject "FioTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6A3823269A1368001DCEBB /* Debug */,
+				9C6A3824269A1368001DCEBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6A3825269A1368001DCEBB /* Build configuration list for PBXNativeTarget "FioTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6A3826269A1368001DCEBB /* Debug */,
+				9C6A3827269A1368001DCEBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6A3828269A1368001DCEBB /* Build configuration list for PBXNativeTarget "FioTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6A3829269A1368001DCEBB /* Debug */,
+				9C6A382A269A1368001DCEBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6A382B269A1368001DCEBB /* Build configuration list for PBXNativeTarget "FioTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6A382C269A1368001DCEBB /* Debug */,
+				9C6A382D269A1368001DCEBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C6A37F3269A1364001DCEBB /* Project object */;
+}
