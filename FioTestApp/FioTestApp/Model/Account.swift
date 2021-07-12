@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Account: Decodable {
+struct Account {
     let name: String
     let number: Int
     let currency: String
     let balance: Double
 }
+
+extension Account: Decodable { }

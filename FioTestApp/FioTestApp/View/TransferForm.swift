@@ -8,6 +8,12 @@
 import UIKit
 
 final class TransferForm: UIView {
+    let accountBalanceLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 34)
+        return label
+    }()
+    
     let accountNumberTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
@@ -22,17 +28,7 @@ final class TransferForm: UIView {
         textField.backgroundColor = .white
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.borderStyle = .roundedRect
-        textField.keyboardType = .numberPad
-        return textField
-    }()
-    
-    let executionDateTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.font = UIFont.systemFont(ofSize: 14)
-        textField.borderStyle = .roundedRect
-        textField.placeholder = "Execution date"
-        textField.text = "ASAP"
+        textField.keyboardType = .decimalPad
         return textField
     }()
     
@@ -49,8 +45,8 @@ final class TransferForm: UIView {
     let sendButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 5.0
-        button.isEnabled = true
-        button.backgroundColor = .fioBlue
+        button.isEnabled = false
+        button.backgroundColor = .gray
         button.clipsToBounds = true
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitle("Send", for: .normal)
@@ -100,9 +96,9 @@ final class TransferForm: UIView {
         stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
         
-        [accountNumberTextField,
+        [accountBalanceLabel,
+         accountNumberTextField,
          amountTextField,
-         executionDateTextField,
          variableSymbolTextField,
          sendButton
         ].forEach { view in

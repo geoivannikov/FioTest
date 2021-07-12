@@ -8,9 +8,15 @@
 import Foundation
 
 protocol HistoryViewModelProtocol {
-    
+    var transfers: [TransferData] { get }
 }
 
 final class HistoryViewModel: HistoryViewModelProtocol {
+    let transfers: [TransferData]
     
+    init(fileService: FileServiceProtocol? = Env.current.fileService) {
+        transfers = fileService?.retrieveData(from: "transfers", "txt")?.split(whereSeparator: \.isNewline)
+            .compactMap { $0.data(using: .utf8) }
+            .compactMap { try? JSONDecoder().decode(TransferData.self, from: $0) } ?? []
+    }
 }

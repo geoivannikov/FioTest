@@ -35,6 +35,8 @@ final class TransferFormViewController: UIViewController {
         transferForm.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         transferForm.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         transferForm.amountTextField.placeholder = "Amount (\(viewModel.account.currency))"
+        transferForm.accountBalanceLabel.text = "\(String(viewModel.account.balance)) \(viewModel.account.currency)"
+        transferForm.accountBalanceLabel.textColor = viewModel.account.balance >= 0 ? .fioGreen : .fioRed
         
         dismissKeyboardAfterTap()
     }
@@ -42,21 +44,18 @@ final class TransferFormViewController: UIViewController {
     private func setUpBinds() {
         transferForm.sendButton
             .publisher(for: .touchUpInside)
-//            .compactMap { [weak self] _ -> TransferData? in
-//                guard let self = self,
-//                      let accountNumber = self.transferForm.accountNumberTextField.text,
-//                      let amount = self.transferForm.amountTextField.text,
-//                      let variableSymbol = self.transferForm.variableSymbolTextField.text else {
-//                    return nil
-//                }
-//                return TransferData(accountName: self.viewModel.account.name,
-//                                    currency: self.viewModel.account.currency,
-//                                    accountNumber: accountNumber,
-//                                    amount: Double(amount) ?? 0,
-//                                    variableSymbol: Int(variableSymbol) ?? 0)
-//            }
-            .map { _ in
-                TransferData(accountName: "Some", currency: "USD", accountNumber: "11111", amount: 10, variableSymbol: 1111)
+            .compactMap { [weak self] _ -> TransferData? in
+                guard let self = self,
+                      let accountNumber = self.transferForm.accountNumberTextField.text,
+                      let amount = self.transferForm.amountTextField.text,
+                      let variableSymbol = self.transferForm.variableSymbolTextField.text else {
+                    return nil
+                }
+                return TransferData(accountName: self.viewModel.account.name,
+                                    currency: self.viewModel.account.currency,
+                                    recipientNumber: accountNumber,
+                                    amount: Double(amount) ?? 0,
+                                    variableSymbol: Int(variableSymbol) ?? 0)
             }
             .sink(receiveValue: { [weak self] transferData in
                 self?.viewModel.sendTransfer.send(transferData)

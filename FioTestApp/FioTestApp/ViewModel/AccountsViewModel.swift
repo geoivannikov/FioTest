@@ -29,21 +29,27 @@ final class AccountsViewModel: AccountsViewModelProtocol {
     
     private let accountsSubject = PassthroughSubject<[Account], Never>()
     private let isHistoryEmptySubject = PassthroughSubject<Bool, Never>()
+    private let apiManager: ApiManagerProtocol
     
     private var subscriptions = Set<AnyCancellable>()
 
     init(apiManager: ApiManagerProtocol = Env.current.apiManager,
          reachabilityService: ReachabilityServiceProtocol = Env.current.reachabilityService) {
+        self.apiManager = apiManager
         
-        apiManager.fetchData(url: URL(string: "http://kali.fio.cz/test/accounts.json")!)
-            .sink(receiveCompletion: { _ in }, receiveValue: {
-                print($0)
+        apiManager.fetchData(url: URL(string: "http://kali.fio.cz/test/accounts.json"))
+            .sink(receiveCompletion: { _ in }, receiveValue: { _ in
             })
             .store(in: &subscriptions)
     }
     
     func viewDidLoad() {
-        accountsSubject.send([Account(name: "Some name", number: 1, currency: "USD", balance: 10)])
         isHistoryEmptySubject.send(false)
+        apiManager.fetchData(url: URL(string: "http://kali.fio.cz/test/accounts.json"))
+            .map(\.accounts)
+            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] accounts in
+                self?.accountsSubject.send(accounts)
+            })
+            .store(in: &subscriptions)
     }
 }

@@ -31,9 +31,7 @@ final class FileService: FileServiceProtocol {
     }
     
     func saveData(to fileName: String, _ pathExtension: String, content: String) {
-        print("\(fileName) \(pathExtension)")
-        let fileURL = directoryURL.appendingPathComponent(fileName).appendingPathComponent(pathExtension)
-        print(fileURL.path)
+        let fileURL = directoryURL.appendingPathComponent(fileName).appendingPathExtension(pathExtension)
         if !FileManager.default.fileExists(atPath: fileURL.path) {
             FileManager.default.createFile(atPath: fileURL.path, contents: nil)
         }
@@ -45,15 +43,11 @@ final class FileService: FileServiceProtocol {
     }
     
     func retrieveData(from fileName: String, _ pathExtension: String) -> String? {
-        let fileURL = directoryURL.appendingPathComponent(fileName).appendingPathComponent(pathExtension)
+        let fileURL = directoryURL.appendingPathComponent(fileName).appendingPathExtension(pathExtension)
         if !FileManager.default.fileExists(atPath: fileURL.path) {
             return nil
         }
         
-        do {
-            return try String(contentsOf: fileURL, encoding: .utf8)
-        } catch {
-            return nil
-        }
+        return try? String(contentsOf: fileURL, encoding: .utf8)
     }
 }

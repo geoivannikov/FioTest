@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct AccountsData: Decodable {
+struct AccountsData {
     let accounts: [Account]
 }
+
+extension AccountsData: Decodable { }

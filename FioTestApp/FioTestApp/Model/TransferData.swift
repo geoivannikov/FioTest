@@ -10,7 +10,9 @@ import Foundation
 struct TransferData {
     let accountName: String
     let currency: String
-    let accountNumber: String
+    let recipientNumber: String
     let amount: Double
     let variableSymbol: Int
 }
+
+extension TransferData: Codable { }

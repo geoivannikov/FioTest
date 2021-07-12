@@ -15,4 +15,12 @@ extension UIColor {
     static var fioGrey: UIColor {
         UIColor(red: 169.0 / 255.0, green: 169.0 / 255.0, blue: 169.0 / 255.0, alpha: 1)
     }
+    
+    static var fioGreen: UIColor {
+        UIColor(red: 34.0 / 255.0, green: 139.0 / 255.0, blue: 34.0 / 255.0, alpha: 1)
+    }
+    
+    static var fioRed: UIColor {
+        UIColor(red: 178.0 / 255.0, green: 34.0 / 255.0, blue: 34.0 / 255.0, alpha: 1)
+    }
 }

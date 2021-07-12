@@ -24,7 +24,11 @@ final class TransferFormViewModel: TransferFormViewModelProtocol {
         
         sendTransfer
             .sink(receiveValue: { transferData in
-                fileService?.saveData(to: "transfers", "txt", content: "bla")
+                guard let encodedTransferData = try? JSONEncoder().encode(transferData),
+                      let transferDataString = String(data: encodedTransferData, encoding: .utf8) else {
+                    return
+                }
+                fileService?.saveData(to: "transfers", "txt", content: transferDataString + "\n")
             })
             .store(in: &subscriptions)
     }

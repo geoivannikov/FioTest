@@ -19,7 +19,7 @@ struct Environment {
         if !FileManager.default.fileExists(atPath: transfersDirectoryURL.path) {
             try? FileManager.default.createDirectory(at: transfersDirectoryURL, withIntermediateDirectories: true, attributes: nil)
         }
-        return directory
+        return transfersDirectoryURL
     }()
     var fileService: FileServiceProtocol? {
         FileService(directoryURL: transfersDirectoryURL)
