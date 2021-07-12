@@ -15,8 +15,9 @@ final class HistoryViewModel: HistoryViewModelProtocol {
     let transfers: [TransferData]
     
     init(fileService: FileServiceProtocol? = Env.current.fileService) {
-        transfers = fileService?.retrieveData(from: "transfers", "txt")?.split(whereSeparator: \.isNewline)
+        transfers = fileService?.retrieveData(from: Constants.fileName, "txt")?.split(whereSeparator: \.isNewline)
             .compactMap { $0.data(using: .utf8) }
-            .compactMap { try? JSONDecoder().decode(TransferData.self, from: $0) } ?? []
+            .compactMap { try? JSONDecoder().decode(TransferData.self, from: $0) }
+            .reversed() ?? []
     }
 }

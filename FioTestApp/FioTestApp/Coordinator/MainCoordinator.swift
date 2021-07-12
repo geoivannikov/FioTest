@@ -24,9 +24,18 @@ final class MainCoordinator {
 
         accountsViewModel.selectedAccount
             .sink(receiveValue: { [weak self] selectedAccount in
+                guard let self = self else {
+                    return
+                }
                 let transferFormViewModel = TransferFormViewModel(account: selectedAccount)
                 let transferFormViewController = TransferFormViewController(viewModel: transferFormViewModel)
-                self?.navigationController.pushViewController(transferFormViewController, animated: true)
+                self.navigationController.pushViewController(transferFormViewController, animated: true)
+                
+                transferFormViewModel.sendTransfer
+                    .sink(receiveValue: { [weak self] _ in
+                        self?.navigationController.popViewController(animated: true)
+                    })
+                    .store(in: &self.subscriptions)
             })
             .store(in: &subscriptions)
         
@@ -38,6 +47,16 @@ final class MainCoordinator {
             })
             .store(in: &subscriptions)
         
+        accountsViewModel.displayErrorAlert
+            .sink(receiveValue: presentError(error:))
+            .store(in: &subscriptions)
+        
         navigationController.viewControllers = [accountsViewController]
+    }
+    
+    private func presentError(error: APIError) {
+        let alert = UIAlertController(title: "Error", message: error.description, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        navigationController.present(alert, animated: true)
     }
 }

@@ -28,7 +28,7 @@ final class TransferForm: UIView {
         textField.backgroundColor = .white
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.borderStyle = .roundedRect
-        textField.keyboardType = .decimalPad
+        textField.keyboardType = .numberPad
         return textField
     }()
     

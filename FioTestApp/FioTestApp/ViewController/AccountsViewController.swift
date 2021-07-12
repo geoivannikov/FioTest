@@ -10,7 +10,11 @@ import Combine
 
 final class AccountsViewController: UITableViewController {
     private let viewModel: AccountsViewModelProtocol
-    private var accounts: [Account] = []
+    private var accounts: [Account] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     private var subscriptions = Set<AnyCancellable>()
 
@@ -23,8 +27,6 @@ final class AccountsViewController: UITableViewController {
         setUpLayout()
         setUpBinds()
         viewModel.viewDidLoad()
-        
-//        viewModel.selectedAccount.send(Account(name: "Some name", number: 1111, currency: "CZK", balance: 10.0))
     }
     
     private func setUpLayout() {
@@ -41,13 +43,6 @@ final class AccountsViewController: UITableViewController {
         viewModel.accounts
             .sink(receiveValue: { [weak self] accounts in
                 self?.accounts = accounts
-                self?.tableView.reloadData()
-            })
-            .store(in: &subscriptions)
-        
-        viewModel.isHistoryEmpty
-            .sink(receiveValue: { [weak self] in
-                self?.navigationItem.rightBarButtonItem?.isEnabled = !$0
             })
             .store(in: &subscriptions)
     }

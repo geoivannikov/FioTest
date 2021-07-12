@@ -21,12 +21,12 @@ final class ApiManager: ApiManagerProtocol {
                 return promise(.failure(.unknownError))
             }
             guard let url = url else {
-                return promise(.failure(.urlError(URLError(URLError.unsupportedURL))))
+                return promise(.failure(.urlError))
             }
             URLSession.shared.dataTaskPublisher(for: url)
                 .tryMap { data, response -> AccountsData in
                     guard let httpResponse = response as? HTTPURLResponse, 200...299 ~= httpResponse.statusCode else {
-                        throw APIError.responseError((response as? HTTPURLResponse)?.statusCode ?? 500)
+                        throw APIError.responseError
                     }
                     return try JSONDecoder().decode(AccountsData.self, from: data)
                 }
@@ -34,10 +34,10 @@ final class ApiManager: ApiManagerProtocol {
                 .sink(receiveCompletion: { (completion) in
                     if case let .failure(error) = completion {
                         switch error {
-                        case let urlError as URLError:
-                            promise(.failure(.urlError(urlError)))
-                        case let decodingError as DecodingError:
-                            promise(.failure(.decodingError(decodingError)))
+                        case _ as URLError:
+                            promise(.failure(.urlError))
+                        case _ as DecodingError:
+                            promise(.failure(.decodingError))
                         case let apiError as APIError:
                             promise(.failure(apiError))
                         default:

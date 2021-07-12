@@ -15,7 +15,7 @@ struct Environment {
                                                            create: true) else {
             return nil
         }
-        let transfersDirectoryURL = directory.appendingPathComponent("userData")
+        let transfersDirectoryURL = directory.appendingPathComponent(Constants.directoryName)
         if !FileManager.default.fileExists(atPath: transfersDirectoryURL.path) {
             try? FileManager.default.createDirectory(at: transfersDirectoryURL, withIntermediateDirectories: true, attributes: nil)
         }

@@ -12,7 +12,7 @@ struct TransferData {
     let currency: String
     let recipientNumber: String
     let amount: Double
-    let variableSymbol: Int
+    let variableSymbol: Int?
 }
 
 extension TransferData: Codable { }

@@ -28,7 +28,7 @@ final class TransferFormViewModel: TransferFormViewModelProtocol {
                       let transferDataString = String(data: encodedTransferData, encoding: .utf8) else {
                     return
                 }
-                fileService?.saveData(to: "transfers", "txt", content: transferDataString + "\n")
+                fileService?.saveData(to: Constants.fileName, "txt", content: transferDataString + "\n")
             })
             .store(in: &subscriptions)
     }
