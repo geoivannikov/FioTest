@@ -15,10 +15,7 @@ final class HistoryCell: UITableViewCell {
         return label
     }()
     
-    private let recipientLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    private let recipientLabel = UILabel()
     
     private let amountLabel: UILabel = {
         let label = UILabel()

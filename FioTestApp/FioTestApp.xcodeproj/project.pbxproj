@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		9C21C23B269D061E0059E3C7 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C23A269D061E0059E3C7 /* ReachabilityService.swift */; };
 		9C21C23D269D0A420059E3C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C23C269D0A420059E3C7 /* Constants.swift */; };
+		9C21C254269E45C20059E3C7 /* ApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C253269E45C20059E3C7 /* ApiManagerMock.swift */; };
+		9C21C256269E45C80059E3C7 /* ReachabilityServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C255269E45C80059E3C7 /* ReachabilityServiceMock.swift */; };
+		9C21C258269E45D30059E3C7 /* TransferDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C257269E45D30059E3C7 /* TransferDataTests.swift */; };
+		9C21C25A269E45D80059E3C7 /* AccountsDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C259269E45D80059E3C7 /* AccountsDataTests.swift */; };
+		9C21C25C269E45E50059E3C7 /* AccountsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C25B269E45E50059E3C7 /* AccountsViewModelTest.swift */; };
 		9C6A37FF269A1364001DCEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A37FE269A1364001DCEBB /* AppDelegate.swift */; };
 		9C6A3806269A1364001DCEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A3804269A1364001DCEBB /* Main.storyboard */; };
 		9C6A3808269A1368001DCEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A3807269A1368001DCEBB /* Assets.xcassets */; };
 		9C6A380B269A1368001DCEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A3809269A1368001DCEBB /* LaunchScreen.storyboard */; };
-		9C6A3816269A1368001DCEBB /* FioTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A3815269A1368001DCEBB /* FioTestAppTests.swift */; };
 		9C6A3832269A165D001DCEBB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A3831269A165D001DCEBB /* MainCoordinator.swift */; };
 		9C873DA9269A364900ACF6A7 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DA8269A364900ACF6A7 /* ApiManager.swift */; };
 		9C873DAC269A3A9600ACF6A7 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C873DAB269A3A9600ACF6A7 /* AccountsViewController.swift */; };
@@ -52,6 +56,11 @@
 /* Begin PBXFileReference section */
 		9C21C23A269D061E0059E3C7 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		9C21C23C269D0A420059E3C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C21C253269E45C20059E3C7 /* ApiManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManagerMock.swift; sourceTree = "<group>"; };
+		9C21C255269E45C80059E3C7 /* ReachabilityServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityServiceMock.swift; sourceTree = "<group>"; };
+		9C21C257269E45D30059E3C7 /* TransferDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferDataTests.swift; sourceTree = "<group>"; };
+		9C21C259269E45D80059E3C7 /* AccountsDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataTests.swift; sourceTree = "<group>"; };
+		9C21C25B269E45E50059E3C7 /* AccountsViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewModelTest.swift; sourceTree = "<group>"; };
 		9C6A37FB269A1364001DCEBB /* FioTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FioTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6A37FE269A1364001DCEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6A3805269A1364001DCEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +68,6 @@
 		9C6A380A269A1368001DCEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6A380C269A1368001DCEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6A3811269A1368001DCEBB /* FioTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FioTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C6A3815269A1368001DCEBB /* FioTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FioTestAppTests.swift; sourceTree = "<group>"; };
 		9C6A3817269A1368001DCEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6A3831269A165D001DCEBB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9C873DA8269A364900ACF6A7 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -104,6 +112,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C21C250269E45800059E3C7 /* DTOTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C21C257269E45D30059E3C7 /* TransferDataTests.swift */,
+				9C21C259269E45D80059E3C7 /* AccountsDataTests.swift */,
+			);
+			path = DTOTests;
+			sourceTree = "<group>";
+		};
+		9C21C251269E459D0059E3C7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9C21C253269E45C20059E3C7 /* ApiManagerMock.swift */,
+				9C21C255269E45C80059E3C7 /* ReachabilityServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9C21C252269E45A70059E3C7 /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				9C21C25B269E45E50059E3C7 /* AccountsViewModelTest.swift */,
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
 		9C6A37F2269A1364001DCEBB = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +177,9 @@
 		9C6A3814269A1368001DCEBB /* FioTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9C6A3815269A1368001DCEBB /* FioTestAppTests.swift */,
+				9C21C251269E459D0059E3C7 /* Mocks */,
+				9C21C250269E45800059E3C7 /* DTOTests */,
+				9C21C252269E45A70059E3C7 /* ViewModelTest */,
 				9C6A3817269A1368001DCEBB /* Info.plist */,
 			);
 			path = FioTestAppTests;
@@ -389,7 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C6A3816269A1368001DCEBB /* FioTestAppTests.swift in Sources */,
+				9C21C258269E45D30059E3C7 /* TransferDataTests.swift in Sources */,
+				9C21C254269E45C20059E3C7 /* ApiManagerMock.swift in Sources */,
+				9C21C25C269E45E50059E3C7 /* AccountsViewModelTest.swift in Sources */,
+				9C21C256269E45C80059E3C7 /* ReachabilityServiceMock.swift in Sources */,
+				9C21C25A269E45D80059E3C7 /* AccountsDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
